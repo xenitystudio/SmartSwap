@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.hover-shadow:hover {
+  box-shadow: 0 0.1rem 0.5rem rgba(71, 71, 71, 0.15); /* Bootstrap's .shadow-lg style */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Main Background */
+.blue-glow-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(67, 139, 239, 0.15) 30%, rgba(33, 140, 255, 0.2) 60%, rgba(52, 150, 255, 0) 100%);
+  filter: blur(50px);
+  z-index: -1;
+}
+.step-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.step-indicators .indicator {
+  width: 100px;
+  height: 2px;
+  background-color: rgba(201, 224, 255, 1);
+  transition: background-color 0.2s;
+}
+.step-indicators .indicator.active {
+  background-color: #0d6efd; /* biru Bootstrap */
+}
+
+.Pair-Box {
+  background-color: rgba(242, 242, 242, 1);
+  border: 1px solid rgba(91, 91, 91, 1);
+  border-radius: 8px;
+  color: black;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  flex-wrap: wrap; /* untuk desktop kalau melebihi container */
+}
+
+.rotated-box-active {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #3b82f6, #93c5fd); /* biru gradasi */
+  border-radius: 20px;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  align-items: center;
+}
+.rotated-box {
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgba(162, 162, 162, 1);
+  border-radius: 20px;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  align-items: center;
+}
+.hover-rotated-box:hover {
+  background: linear-gradient(135deg, #3b82f6, #93c5fd); /* biru gradasi */
+  border: 0px;
+}
+
+.rotated-BTC-Image {
+  transform: rotate(-35deg);
+  width: 80px; /* atau sesuaikan ukuran sesuai desain */
+  height: 80px;
+}
+.rotated-Image {
+  transform: rotate(-45deg);
+  width: 80px; /* atau sesuaikan ukuran sesuai desain */
+  height: 80px;
+}
+
+/* Content 3 */
+.step-card {
+  background-color: white;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.step-card.active-step {
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  color: white;
+  border: none;
+}
+
+.step-card .step-toggle {
+  cursor: pointer;
+  border: none;
+}
+
+.step-card .step-number {
+  transition: color 0.3s ease;
+}
+
+.step-card.active-step .step-number {
+  color: white;
+  border: none;
+}
+.step-badge {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.step-card.active-step .step-badge {
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  color: white;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 1.25rem;
+}
+
+.content-3-swap {
+  width: 40rem;
+}
+.content-3-swap-p {
+  width: 35%;
+}
+
+.Content-3-End-Box {
+  padding-top: 1rem;
+  padding-bottom: 10rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.content-3-imgBoxP1 {
+  width: 50%;
+}
+.content-3-imgBoxP2 {
+  width: 50%;
+}
+.content-4-start {
+  width: 50rem;
+}
+.content-4-imgBox {
+  width: 70%;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .icon-wrapper {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* sesuaikan jarak antar item */
+    justify-items: center;
+  }
+  .rotated-box-active {
+    margin-top: 3rem;
+  }
+  .rotated-box {
+    margin-top: 3rem;
+  }
+
+  .content-3-swap {
+    width: 100%;
+  }
+  .content-3-swap-p {
+    width: 100%;
+  }
+  .Content-3-End-Box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .content-3-imgBoxP1 {
+    width: 100%;
+    height: 15rem;
+  }
+  .content-3-imgBoxP2 {
+    width: 100%;
+    height: 15rem;
+  }
+  .content-4-start {
+    width: 100%;
+  }
+  .content-4-imgBox {
+    width: 100%;
+    height: 15rem;
+    margin-top: 3rem;
+  }
+}
